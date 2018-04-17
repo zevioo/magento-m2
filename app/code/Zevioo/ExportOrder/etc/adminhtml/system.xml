@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="export_order_view" sortOrder="999" translate="label">
+			<label>Zevioo Export Order Via Api</label>
+		</tab>
+		<section id="export_api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<class>separator-top</class>
+			<label>Api Configuration</label>
+			<tab>export_order_view</tab>
+			<resource>Zevioo_ExportOrder::config_zevioo_exportorder</resource>
+			<group id="module_config" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+				<label>Module Configuration</label>
+				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="select">
+					<label>Enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="delivery_shipping" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Delivery Shipping</label>
+                    <frontend_model>\Zevioo\ExportOrder\Block\Adminhtml\System\Shipping</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+			</group>
+			<group id="api_config" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label">
+				<label>Credential</label>
+				<field id="username" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="password">
+					<label>Username</label>
+					<comment/>
+				</field>
+				<field id="password" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label" type="password">
+					<label>Password</label>
+					<comment/>
+				</field>
+				<!-- <field id="debug" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="2" translate="label" type="select">
+					<label>Debug</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field> -->
+			</group>
+		</section>
+	</system>
+</config>

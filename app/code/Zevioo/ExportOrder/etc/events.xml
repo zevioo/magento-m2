@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="checkout_onepage_controller_success_action">
+		<observer instance="Zevioo\ExportOrder\Observer\Checkout\OnepageControllerSuccessAction" name="zevioo_exportorder_observer_checkout_onepagecontrollersuccessaction_checkout_onepage_controller_success_action"/>
+	</event>
+	<event name="order_cancel_after">
+		<observer instance="Zevioo\ExportOrder\Observer\Order\CancelAfter" name="zevioo_exportorder_observer_order_cancelafter_order_cancel_after"/>
+	</event>
+</config>

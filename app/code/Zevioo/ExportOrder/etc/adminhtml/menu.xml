@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Zevioo_ExportOrder::parent" title="Zevioo" module="Zevioo_ExportOrder" sortOrder="20" resource="Zevioo_ExportOrder::parent"/>
+		<add id="Zevioo_ExportOrder::export" title="Export Order Report" module="Zevioo_ExportOrder" sortOrder="0" parent="Zevioo_ExportOrder::parent" action="exportorder/export" resource="Zevioo_ExportOrder::export"/>
+
+		<add id="Zevioo_ExportOrder::api_config" title="Zevioo Configuration" module="Zevioo_ExportOrder" sortOrder="1" action="adminhtml/system_config/edit/section/export_api" resource="Zevioo_ExportOrder::api_configuration" parent="Zevioo_ExportOrder::parent"/>
+
+    </menu>
+</config>
