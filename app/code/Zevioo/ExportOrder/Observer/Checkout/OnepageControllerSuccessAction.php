@@ -63,7 +63,7 @@ class OnepageControllerSuccessAction implements \Magento\Framework\Event\Observe
                 $params['DDT'] = $delivery_date;
                 $params['EML'] = $billingaddress->getData('email');
                 $params['FN'] = $firstname;
-                $params['LN'] = $lastname;
+                $params['LN'] = substr($lastname,0,1);
                 $params['PC'] =  $billingaddress->getData('postcode');
                 $orderItems = $order->getAllVisibleItems();
                 foreach ($orderItems as $item) {
